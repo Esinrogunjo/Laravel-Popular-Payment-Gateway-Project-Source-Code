@@ -35,6 +35,7 @@ class ComposerStaticInitbac269b6fa88409dffec6d9c951633bc
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         '13906c19e3d8fcd1341b24ed4d51cf72' => __DIR__ . '/..' . '/razorpay/razorpay/Deprecated.php',
         '320163ac6b93aebe3dc25b60a0533d56' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/helpers.php',
+        '7516879b55e16d1f61b873feaac88351' => __DIR__ . '/..' . '/2checkout-php-sdk/autoloader.php',
     );
 
     public static $prefixLengthsPsr4 = array (

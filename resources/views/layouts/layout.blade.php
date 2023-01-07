@@ -53,7 +53,11 @@
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; <a href="https://websolutionus.com/">websolutionus</a> {{date('Y')}}</p></div>
         </footer>
         <!-- Bootstrap core JS-->
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="https://2pay-js.2checkout.com/v1/2pay.js"></script>
+
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>

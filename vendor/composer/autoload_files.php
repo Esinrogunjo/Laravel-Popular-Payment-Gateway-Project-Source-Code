@@ -34,4 +34,5 @@ return array(
     'ec07570ca5a812141189b1fa81503674' => $vendorDir . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
     '13906c19e3d8fcd1341b24ed4d51cf72' => $vendorDir . '/razorpay/razorpay/Deprecated.php',
     '320163ac6b93aebe3dc25b60a0533d56' => $vendorDir . '/spatie/laravel-ignition/src/helpers.php',
+    '7516879b55e16d1f61b873feaac88351' => $vendorDir . '/2checkout-php-sdk/autoloader.php',
 );

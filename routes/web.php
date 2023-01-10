@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Gateways\InstamojoController;
 use App\Http\Controllers\Gateways\RazorpayController;
 use App\Http\Controllers\Gateways\PaypalController;
 use App\Http\Controllers\Gateways\StripeController;
@@ -34,9 +35,11 @@ Route::get('stripe/cancel', [StripeController::class, 'cancel'])->name('stripe.c
 
 Route::post('razorpay/payment', [RazorpayController::class, 'payment'])->name('razorpay.payment');
 
-
 Route::get('twocheckout/payment',[TwoCheckoutController::class, 'showFrom'])->name('twocheckout.payment');
-
 Route::post('twocheckout/handle-payment',[TwoCheckoutController::class, 'handlePayment'])->name('twocheckout.handle-payment');
-
 Route::get('twocheckout/success', [TwoCheckoutController::class, 'success'])->name('twocheckout.success');
+
+
+Route::post('instamojo/payment', [InstamojoController::class, 'payment'])->name('instamojo.payment');
+
+Route::get('instamojo/callback', [InstamojoController::class, 'callback'])->name('instamojo.callback');

@@ -34,14 +34,12 @@
                         <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1"
                             style="max-width: 3rem" />
                             
-                           <form action="{{route('mollie.payment')}}" method="POST">
-                            @csrf
-                            <input type="hidden" name="price" value="40">
-                            <button type="submit" class="btn btn-outline-dark flex-shrink-0" type="button">
+                           
+                            <a href="{{route('paystack.redirect')}}" type="submit" class="btn btn-outline-dark flex-shrink-0" type="button">
                                 <i class="bi-cart-fill me-1"></i>
                                 Buy Now
-                            </button>
-                           </form>
+                            </a>
+                          
                     </div>
                 </div>
             </div>

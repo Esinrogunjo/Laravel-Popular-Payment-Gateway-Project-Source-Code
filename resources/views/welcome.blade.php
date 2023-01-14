@@ -33,13 +33,16 @@
                     <div class="d-flex">
                         <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1"
                             style="max-width: 3rem" />
-                            
-                           
-                            <a href="{{route('paystack.redirect')}}" type="submit" class="btn btn-outline-dark flex-shrink-0" type="button">
+
+                          <form action="{{route('sslcommerz.pay')}}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn btn-outline-dark flex-shrink-0" type="button">
                                 <i class="bi-cart-fill me-1"></i>
                                 Buy Now
-                            </a>
-                          
+                            </button>
+                          </form>
+
+
                     </div>
                 </div>
             </div>

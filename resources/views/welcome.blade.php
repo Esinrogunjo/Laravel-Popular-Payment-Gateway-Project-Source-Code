@@ -30,18 +30,89 @@
                     <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem
                         modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus
                         ipsam minima ea iste laborum vero?</p>
-                    <div class="d-flex">
+                    <div class="">
                         <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1"
                             style="max-width: 3rem" />
 
-                          <form action="{{route('sslcommerz.pay')}}" method="POST">
-                            @csrf
-                            <button type="submit" class="btn btn-outline-dark flex-shrink-0" type="button">
-                                <i class="bi-cart-fill me-1"></i>
-                                Buy Now
-                            </button>
-                          </form>
+                            <div class="row">
+                                <div class="col-md-4 my-2">
+                                    <form action="{{route('paypal.payment')}}" method="POST">
+                                        @csrf
+                                        <input type="hidden" value="40" name="price">
+                                        <button type="submit" class="btn btn-outline-dark flex-shrink-0" type="button">
+                                            <i class="bi-cart-fill me-1"></i>
+                                            Buy With Paypal
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="col-md-4 my-2">
+                                    <form action="{{route('stripe.payment')}}" method="POST">
+                                        @csrf
+                                        <input type="hidden" value="40" name="price">
+                                        <button type="submit" class="btn btn-outline-dark flex-shrink-0" type="button">
+                                            <i class="bi-cart-fill me-1"></i>
+                                            Buy With Stripe
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="col-md-4 my-2">
+                                    <form action="{{route('razorpay.payment')}}" method="POST">
+                                        @csrf
+                                        <script src="https://checkout.razorpay.com/v1/checkout.js"
+                                                data-key="{{config('razorpay.key')}}"
+                                                data-amount="{{ 40 * 100}}"
+                                                data-buttontext="Pay With Razorpay"
+                                                data-name="test payment"
+                                                data-description="Payment"
+                                                data-prefill.name="user"
+                                                data-prefill.email="user@gmail.com"
+                                                data-theme.color="#ff7529">
+                                        </script>
+                                   </form>
+                                </div>
+                                <div class="col-md-4 my-2">
+                                    <a href="{{route('twocheckout.payment')}}" type="submit" class="btn btn-outline-dark flex-shrink-0" type="button">
+                                        <i class="bi-cart-fill me-1"></i>
+                                        Buy With 2CO
+                                    </a>
+                                </div>
 
+                                <div class="col-md-6 my-2">
+                                    <form action="{{route('instamojo.payment')}}" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="price" value="3700">
+                                        <button type="submit" class="btn btn-outline-dark flex-shrink-0">
+                                            <i class="bi-cart-fill me-1"></i>
+                                            Buy With Instamojo
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="col-md-4 my-2">
+                                    <form action="{{route('mollie.payment')}}" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="price" value="40">
+                                        <button type="submit" class="btn btn-outline-dark flex-shrink-0">
+                                            <i class="bi-cart-fill me-1"></i>
+                                            Buy With Mollie
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="col-md-4 my-2">
+                                    <a href="{{route('paystack.redirect')}}" type="submit" class="btn btn-outline-dark flex-shrink-0" type="button">
+                                        <i class="bi-cart-fill me-1"></i>
+                                        Buy With Paystack
+                                    </a>
+                                </div>
+                                <div class="col-md-6 my-2">
+                                    <form action="{{route('sslcommerz.pay')}}" method="POST">
+                                        @csrf
+                                        <button type="submit" class="btn btn-outline-dark flex-shrink-0" >
+                                            <i class="bi-cart-fill me-1"></i>
+                                            Buy With Ssscommerz
+                                        </button>
+                                      </form>
+                                </div>
+                            </div>
 
                     </div>
                 </div>
